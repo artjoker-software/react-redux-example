@@ -1,0 +1,126 @@
+.authentication_form {
+  @media only screen and (max-width: 767px) {
+    padding: 0 18px;
+    :global(.checkbox label) {
+      padding: 0px 0px 14px 5px;
+      }
+    }
+  }
+
+.authorization_buttons{
+  margin: 20px 0;
+  @media only screen and (max-width: 767px) {
+    position: relative;
+    height: 79px;
+    text-align: right;
+    margin: -3px 0 9px!important;
+  }
+  &>* {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    text-align: center;
+    @media only screen and (max-width: 767px) {
+      text-align: right;
+    }
+  }
+  & > a {
+    cursor: pointer;
+  }
+
+  :global(.checkbox) {
+    margin: 0;
+    padding: 0 15px 0 0;
+    font-size: 19px;
+    @media only screen and (max-width: 767px) {
+      padding: 0;
+    }
+    label {
+      padding-left: 0;
+    }
+  }
+
+  :global(.btn) {
+    background-color: #484848;
+    border-color: #484848;
+    width: auto;
+    min-width: 100px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+    &:hover {
+      background-color: #ebff00;
+      color: #484848;
+    }
+  }
+}
+
+.form_link {
+  margin-bottom: 20px;
+  font-size: 19px;
+  min-height: 20px;
+  @media only screen and (max-width: 767px) {
+    margin-bottom: 25px;
+    font-size: 16px;
+    label {
+      font-size: 16px;
+    }
+  }
+  &a, a {
+    cursor: pointer;
+    color: #00a6ee;
+  }
+  :global(.checkbox) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+:global {
+  .glyphicon-spin :local {
+    -webkit-animation: spin 1500ms infinite linear;
+    animation: spin 1500ms infinite linear;
+    font-size: 26px;
+    vertical-align: top;
+    display: none;
+  }
+
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(359deg);
+      transform: rotate(359deg);
+    }
+  }
+}
+
+.errorMessage {
+  color: #ff0000;
+  width: 70%;
+}
+
+.spinner {
+  font-size: 1.45em;
+}

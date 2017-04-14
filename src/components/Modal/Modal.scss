@@ -1,0 +1,358 @@
+.customOverlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.customStyles {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  border: none;
+  outline: none;
+  overflow-y: auto;
+  .closeButton {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 11;
+    &:hover {
+      color: #00a7ee;
+    }
+    @media only screen and (max-width: 767px) {
+      color: #00a6ee;
+      font-size: 18px;
+    }
+  }
+
+  :global {
+    .nav-tabs {
+      padding: 0;
+      margin-bottom: 20px;
+      font-size: 18px;
+      & > li {
+        float: none;
+        display: inline-block;
+        margin-left: 19px;
+        &.active>a, &.active>a:focus, &.active>a:hover {
+          background: none;
+          border: none;
+          outline: none;
+          &:after {
+            width: 100%;
+          }
+        }
+        a {
+          padding: 9px 0;
+          color: #000;
+          position: relative;
+          border: none;
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #484848;
+            transition: all .35s ease-in .2s;
+          }
+          &:hover {
+            background: none;
+            border: none;
+            color: #000;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      @media only screen and (max-width: 767px) {
+        border-bottom: 0;
+        letter-spacing: -.3em;
+        margin-bottom: 30px;
+        padding: 0 18px;
+        & > li {
+          display: inline-block;
+          vertical-align: top;
+          width: 50%;
+          letter-spacing: 0;
+          margin: 0;
+          a {
+            height: 35px;
+            padding: 0;
+            line-height: 33px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid #ccc;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            margin: 0;
+            &:after {
+              display: none;
+            }
+            &:hover {
+              border: 1px solid #ccc;
+            }
+          }
+          &.active>a, &.active>a:focus, &.active>a:hover {
+            background: #00a6ee;
+            border: none;
+            color: #fff;
+          }
+          &:first-child:not(:last-child) {
+            a {
+              border-bottom-left-radius: 0;
+              border-top-left-radius: 0;
+            }
+          }
+          &:last-child:not(:first-child) {
+            a {
+              border-bottom-right-radius: 0;
+              border-top-right-radius: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.messageModal {
+  top: 20%;
+  height: auto;
+  bottom: auto;
+  max-width: 430px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #000;
+  & > div {
+    max-width: 230px;
+    margin: 55px auto;
+  }
+  :global(.btn) {
+    line-height: 43px;
+    padding: 0 12px;
+    min-width: 100px;
+    margin-top: 10px;
+  }
+  :global {
+    .ok-button {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      display: block;
+      width: 100px;
+    }
+    .successMessage {
+      padding-bottom: 55px;
+    }
+  }
+}
+
+.userAuthenticationModal {
+  max-width: 430px;
+  left: 0;
+  right: 0;
+  padding: 26px 30px 20px;
+  top: 50%;
+  bottom: auto;
+  margin: -210px auto 0;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 19px;
+  @media only screen and (max-width: 767px) {
+    max-width: none;
+    width: 100%;
+    top: 0;
+    margin-top: 0;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    height: 100%;
+    padding: 10px 0;
+    text-align: center;
+    .closeButton {
+      left: auto;
+      right: 18px;
+      :global(.icon) {
+        color: #00a7ee;
+      }
+    }
+    :global(.checkbox) {
+      padding: 0;
+    }
+    :global(.form-group) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.propertyDetailsModal {
+  max-width: 930px;
+  margin: 0 auto;
+  padding-top: 61px;
+  left: 3%;
+  right: 3%;
+  overflow-x: hidden;
+  .closeButton {
+    top: 19px;
+    left: 25px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 767px) {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+    padding-top: 0;
+    .closeButton {
+      right: 18px;
+      top: 10px;
+    }
+  }
+}
+
+.logoSmall {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  width: 36px;
+  height: 26px;
+  @media only screen and (max-width: 767px) {
+    width: 24px;
+    height: 16px;
+    top: 14px;
+    left: 19px;
+  }
+}
+
+:global {
+  .ReactModal__Body--open {
+    .popover {
+      &.left {
+        margin-left: -45px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 769px){
+  .customStyles {
+    top: 0;
+    margin-top: 0;
+  }
+  .customStyles.messageModal {
+    width: 339px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 33%;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    & > div {
+      max-width: 280px;
+      margin: 52px auto;
+    }
+    :global(.btn) {
+      line-height: 38px;
+      padding: 0 25px;
+      min-width: 100px;
+      margin-top: 30px;
+    }
+  }
+
+}
+
+@media print {
+  .closeButton {
+    display: none;
+  }
+  .propertyDetailsModal {
+    width: 100%;
+    padding: 0 20px;
+    position: static;
+  }
+}
+
+@media (max-width: 930px){
+  .customStyles.propertyModal {
+    width: 100%;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0;
+  }
+  .mobileContacts.customStyles {
+    top: initial;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+    width: 339px;
+    min-height: 157px;
+    border-radius: 2px;
+    background-color: #ffffff;
+    padding-right: 27px;
+    margin: 0 auto;
+    .closeButton {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #00a6ee;
+      border-radius: 50%;
+      bottom: 10px;
+      top: inherit;
+      font-size: 10px;
+      padding: 9px;
+    }
+  }
+}
+
+.advancedFiltersModal {
+  width: 725px;
+  height: 686px;
+  border-radius: 2px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  .closeButton {
+    display: none;
+  }
+  .header {
+    height: 53px;
+    border-bottom: 1px solid #eee;
+    .closeButton {
+      display: block;
+      left: 31px;
+      top: 19px;
+      font-size: 17.5px;
+    }
+    .headerTitle {
+      font-size: 24px;
+      color: #1da7eb;
+      right: 28px;
+      top: 15px;
+      position: absolute;
+      font-weight: 100;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "static": {
+    "description": "SEO описание",
+    "main_page_title": "шаблонный проект",
+    "footer": {
+      "about": "О нас",
+      "help": "Помощь",
+      "terms": "Права использования",
+      "privacy": "Политика приватности",
+      "follow": "Подписывайся"
+    },
+    "header": {
+      "newAccount": "Новый аккаунт",
+      "signIn": "Войти",
+      "homepage": "Главная страница",
+      "more": "больше",
+      "dropDownMenu": {
+        "help": "Помощь",
+        "aboutUs": "О нас",
+        "termsOfUse": "Права использования",
+        "privacyPolicy": "Политика приватности",
+        "homePage": "Домашняя страница"
+      },
+      "profile": "Профиль",
+      "editProfile": "Редактировать профиль",
+      "account": "Аккаунт",
+      "contactInformation": "Сонтактные данные",
+      "logOut": "Выйти"
+    },
+    "userAuthentication": {
+      "title": "Добро пожаловать",
+      "signInTab": {
+        "tabTitle": "Вход",
+        "emailFieldPlaceholder": "Введите почту",
+        "passwordFieldPlaceholder": "Введите пароль",
+        "buttonTitle": "Войти",
+        "passwordTooltipMessage": "Введите пароль от 6 до 20 символов",
+        "emailTitle": "Введите валидный адрес",
+        "emailTooltipMessage": "Введите валидный адрес",
+        "passwordTitle": "Введите валидный пароль",
+        "errorMessage": "Email или пароль неверены",
+        "revealPassword": "Показать пароль",
+        "hidePassword": "Скрыть пароль"
+      },
+      "newAccountTab": {
+        "tabTitle": "Новый аккаунт",
+        "emailFieldPlaceholder": "Введите почту",
+        "passwordFieldPlaceholder": "Придумайте пароль",
+        "buttonTitle": "Отправить",
+        "passwordTooltipMessage": "Введите пароль от 6 до 20 символов",
+        "emailTitle": "Введите валидный адрес",
+        "emailTooltipMessage": "Введите валидный адрес",
+        "passwordTitle": "Введите валидный пароль",
+        "errorMessage": "Пользователь с такой почтой уже зарегистрирован",
+        "revealPassword": "Показать пароль",
+        "hidePassword": "Скрыть пароль"
+      },
+      "invalidLinkMessage": "Ссылка невалидна",
+      "invalidTokenMessage": {
+        "part1": "Не удалось проверить ваш адрес",
+        "part2": "Срок действия ссылки истек"
+      },
+      "tryAgain": "Еще раз"
+    },
+    "notFound": {
+      "oop": "Упс",
+      "pageNotFound": "Кажется такой страницы нет",
+      "goBack": "назад",
+      "toHomePage": "на главную"
+    },
+    "title": {
+      "titleTemplate": "%s | Artjoker",
+      "home": "Главная",
+      "editProfile": "Изменить профиль",
+      "about": "О нас",
+      "terms": "Права использования",
+      "privacy": "Политика приватности",
+      "notFound": "Страница н найдена"
+    },
+    "submit": "Отправить",
+    "clear": "Очистить"
+  }
+}

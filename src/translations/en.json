@@ -1,0 +1,83 @@
+{
+  "static": {
+    "description": "SEO description",
+    "main_page_title": "template project",
+    "footer": {
+      "about": "About",
+      "help": "Help",
+      "terms": "Terms of use",
+      "privacy": "Privacy policy",
+      "follow": "Follow us"
+    },
+    "header": {
+      "newAccount": "New account",
+      "signIn": "Sign in",
+      "homepage": "Homepage",
+      "more": "More",
+      "dropDownMenu": {
+        "help": "Help",
+        "aboutUs": "About us",
+        "termsOfUse": "Terms of use",
+        "privacyPolicy": "Privacy policy",
+        "homePage": "Home"
+      },
+      "profile": "Profile",
+      "editProfile": "Edit profile",
+      "account": "Account",
+      "contactInformation": "Contact information",
+      "logOut": "Log out"
+    },
+    "userAuthentication": {
+      "title": "Welcome",
+      "signInTab": {
+        "tabTitle": "Sign in",
+        "emailFieldPlaceholder": "Enter email",
+        "passwordFieldPlaceholder": "Enter password",
+        "buttonTitle": "Sign in",
+        "passwordTooltipMessage": "Enter password between 6-20 characters and numbers",
+        "emailTitle": "Enter a valid email address",
+        "emailTooltipMessage": "Enter a valid email address",
+        "passwordTitle": "Enter a valid password",
+        "errorMessage": "Wrong email or password",
+        "revealPassword": "reveal password",
+        "hidePassword": "hide password"
+      },
+      "newAccountTab": {
+        "tabTitle": "New Account",
+        "emailFieldPlaceholder": "Enter email",
+        "passwordFieldPlaceholder": "Create password",
+        "buttonTitle": "Submit",
+        "passwordTooltipMessage": "Enter password between 6-20 characters and numbers",
+        "emailTitle": "Enter a valid email address",
+        "emailTooltipMessage": "Enter a valid email address",
+        "passwordTitle": "Enter a valid password",
+        "errorMessage": "User with this email has already been registered",
+        "revealPassword": "reveal password",
+        "hidePassword": "hide password"
+      },
+      "invalidLinkMessage": "Not valid link",
+      "invalidTokenMessage": {
+        "part1": "Unable to verify your email address.",
+        "part2": "Link has expired or is invalid."
+      },
+      "tryAgain": "Try again"
+    },
+    "notFound": {
+      "oop": "Oops",
+      "pageNotFound": "Page Not Found error occurred",
+      "goBack": "Return to the",
+      "toHomePage": "homepage"
+    },
+    "title": {
+      "titleTemplate":"%s | Artjoker",
+      "home": "Home page",
+      "editProfile": "Edit profile",
+      "about": "About us",
+      "terms": "Terms of use",
+      "privacy": "Privacy policy",
+      "notFound": "Page not found"
+    },
+    "submit": "Submit",
+    "clear": "Clear"
+  }
+}

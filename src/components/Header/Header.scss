@@ -1,0 +1,525 @@
+.menu {
+  position: relative;
+  padding: 13px 0 8px;
+  min-height: 60px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  z-index: 1;
+  & > div {
+    width: 100%;
+    padding: 0 55px;
+  }
+  .listMenu {
+    padding: 0;
+    margin: 0;
+    @media only screen and (max-width: 767px) {
+      &:first-child {
+        float: right;
+      }
+      &:last-child {
+        float: left;
+      }
+    }
+    & > li {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
+      margin: 10px;
+      &:not(:first-child) {
+        margin-right: 26px;
+      }
+      & > a {
+        color: #000;
+        padding: 0;
+        font-size: 18px;
+        font-weight: 300;
+        &:global(.dropdown-toggle) {
+          &:hover {
+            color: #ebff00;
+            :global(.caret) {
+              border-color: #a5a5a5 transparent transparent;
+            }
+          }
+          :global(.caret) {
+            left: -15px;
+          }
+        }
+        &focus {
+          &:hover {
+            color: #a5a5a5;
+            :global(.caret) {
+              border-color: #a5a5a5 transparent transparent;
+            }
+          }
+        }
+      }
+      &:global(.open) {
+        & > a {
+          color: #a5a5a5;
+          :global(.caret) {
+            border-color: transparent transparent #a5a5a5 !important;
+          }
+        }
+      }
+      &.btnMenu {
+        padding: 6px 12px;
+        border-color: #66cc33;
+        a:hover, &:global(.active) a {
+          color: #66cc33;
+        }
+      }
+    }
+  }
+}
+
+.btnMenu {
+  border: 1px solid #ccc;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  &:hover {
+    border-color: #00a6ee;
+  }
+}
+
+.logoSmall {
+  height: 30px;
+  @media only screen and (max-width: 767px) {
+    margin-top: 10px;
+    height: 30px;
+  }
+}
+
+:global {
+  .navbar-default {
+    background-color: transparent !important;
+  }
+}
+
+:global {
+  .navbar-default .navbar-nav {
+    & > li {
+      & > a:focus {
+        color: #000;
+      }
+    }
+    & > .open {
+      & > a, & > a:focus, & > a:hover, & > a:active {
+        color: #a5a5a5;
+        background: none;
+        .caret {
+          border-top-width: 0;
+          border-bottom: 4px dashed;
+        }
+      }
+      & > .dropdown-menu {
+        background: rgba(0, 0, 0, .55);
+        border: none;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        text-align: center;
+        padding: 0;
+        min-width: 119px;
+        position: absolute;
+        right: auto;
+        left: -23px;
+        top: calc(100% + 17px);
+        font-size: 18px;
+        & > li {
+          text-align: center;
+          border-top: none;
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba(183,183,183,.3);
+          }
+          &.active > a {
+            background: none;
+          }
+          & > a {
+            color: #fff;
+            padding: 10px 15px;
+            font-weight: 300;
+            &:hover, &:focus, a:active {
+              color: #a5a5a5;
+              background: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.desktopMenu {
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.mobileMenu {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  z-index: 1;
+  -webkit-transition: all 0.35s ease-in;
+  transition: all 0.35s ease-in;
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+  .btnToggle {
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #ebff00;
+    font-size: 15px;
+    z-index: 2;
+    width: 21px;
+    height: 14px;
+    :global(.icon) {
+      transition: all .3s ease;
+    }
+  }
+}
+
+.logoLink {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 18px;
+}
+
+.dropMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 100%;
+  width: 100%;
+  height: 0;
+  background: #363636;
+  padding: 0 16px;
+  font-size: 18px;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-transition: all 0.35s ease-in;
+  transition: all 0.35s ease-in;
+}
+
+:global {
+  .open-menu {
+    height: 100%;
+    left: 0;
+    padding: 51px 16px 16px;
+    -webkit-transition: all 0.35s ease-in 200ms;
+    transition: all 0.35s ease-in 200ms;
+    ul {
+      visibility: visible;
+      & > li {
+        opacity: 1;
+      }
+    }
+  }
+  .open-mobile-menu {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    .mobileNavigation {
+      height: 100%;
+    }
+    :local(.btnToggle) {
+      font-size: 18px;
+      .icon {
+        transform: rotate(-180deg);
+        &:before {
+          content: '\e902';
+        }
+      }
+    }
+    :local {
+      .mobileMenu {
+        position: fixed;
+        .btnToggle {
+          color: #fff;
+        }
+      }
+    }
+    .icon-nav {
+      span {
+        background: #fff;
+        &:nth-child(1) {
+          top: 6px;
+          width: 0;
+          left: 50%;
+        }
+        &:nth-child(2) {
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+        &:nth-child(4) {
+          top: 6px;
+          width: 0;
+          left: 50%;
+        }
+      }
+    }
+  }
+  .icon-logo-small {
+    font-size: 17px;
+  }
+}
+
+.dropMenuList {
+  padding: 0;
+  visibility: hidden;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #484848;
+  }
+  .logoMobile {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    border: none;
+    opacity: 1;
+  }
+  & > li {
+    opacity: 0;
+    &.btnMenu {
+      border: none;
+      border-bottom: 1px solid #484848;
+      a {
+        color: #00a6ee;
+      }
+    }
+    & > a {
+      padding: 15px 0;
+      color: #fff;
+      &:hover, &:focus {
+        color: #ebff00;
+        background: none;
+        outline: none;
+      }
+      & > span {
+        display: inline-block;
+        vertical-align: middle;
+        &:global(.icon) {
+          min-width: 27px;
+          text-align: center;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.btnCloseMenu {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+  font-size: 14px;
+  span {
+    color: #fff;
+  }
+}
+
+.userProfileImage {
+  width: 39px;
+  height: 39px;
+  margin: 1px 10px -4px 15px !important;
+  border-radius: 39px;
+  text-align: center;
+  overflow: hidden;
+  & > img {
+    -webkit-border-radius: 50%;
+    border-radius: 39px;
+    overflow: hidden;
+    width: auto;
+    max-width: none;
+    max-height: 100%;
+  }
+  :global {
+    .icon {
+      width: 100%;
+      text-align: center;
+      line-height: 36px;
+      border-radius: 50%;
+      border: 1px solid #000;
+    }
+    i.fa {
+      line-height: 1.5 !important;
+      font-size: 1.5em !important;
+      color: black;
+    }
+  }
+}
+
+:global(#header_home_page) {
+  position: absolute;
+  background: transparent !important;
+  @media only screen and (max-width: 767px) {
+    &.mobileMenu {
+      height: 0;
+      background: none;
+    }
+    :global(.open-mobile-menu) & {
+      height: 100%;
+      position: fixed;
+    }
+  }
+  ul {
+    & > li {
+      & > a {
+        color: #fff;
+        &:hover {
+          color: #ebff00;
+          :global(.caret) {
+            border-color: #ebff00 transparent transparent;
+          }
+        }
+        &:focus {
+          color: #fff;
+          &:hover {
+            color: #ebff00;
+            :global(.caret) {
+              border-color: #a5a5a5 transparent transparent;
+            }
+          }
+        }
+        :global(.caret) {
+          border-color: #fff transparent transparent;
+        }
+      }
+      &:global(.open) {
+        & > a {
+          color: #ebff00;
+          :global(.caret) {
+            border-color: transparent transparent #a5a5a5 !important;
+          }
+        }
+      }
+    }
+  }
+  .btnMenu {
+    border: 1px solid #66cc33;
+    background: rgba(0,0,0,.25);
+    a:hover {
+      color: #66cc33;
+    }
+  }
+  :global(.icon) {
+    color: #fff;
+    border-color: #fff;
+  }
+  &.mobileMenu {
+    .btnToggle {
+      color: #fff;
+      :global(.icon-nav) {
+        span {
+          background: #fff;
+        }
+      }
+    }
+  }
+
+  & > i.fa {
+    color: white;
+  }
+  .userProfileImage {
+    :global {
+      i.fa {
+        color: white;
+      }
+    }
+  }
+}
+header {
+  position: relative;
+  z-index: 8;
+  background: transparent !important;
+}
+:global {
+  .icon-nav {
+    width: 21px;
+    height: 14px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: #2d2d2d;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+      &:nth-child(1) {
+        top: 0px;
+      }
+      &:nth-child(2), &:nth-child(3) {
+        top: 6px;
+      }
+      &:nth-child(4) {
+        top: 12px;
+      }
+    }
+  }
+}
+
+.homeImg {
+  margin-left: 11px;
+}
+
+.buttonBack {
+  position: absolute;
+  right: 16px;
+  top: 13px;
+  color: #00a6ee;
+  font-size: 21px;
+  background: #fff;
+  z-index: 10;
+  width: 20px;
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.homeDetailsHeader {
+  position: fixed;
+  height: 47px;
+  width: 100%;
+  background-color: #fff !important;
+  border-bottom: 1px solid #ccc;
+}
+
+.mobileHeader {
+  height: 47px;
+}

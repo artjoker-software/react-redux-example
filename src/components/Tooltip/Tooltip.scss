@@ -1,0 +1,26 @@
+.tooltip {
+  background-color: #eeeeee;
+  width: 339px;
+  position: absolute;
+  padding: 25px 28px;
+  line-height: 1.4em;
+  margin-top: -15px;
+  span {
+    font-size: 18px;
+    color: #000000;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+}
+
+:global(.icon-close) {
+  cursor: pointer;
+}
+
+.closeBtn:global(.icon-close:before) {
+  font-size: 12px;
+}

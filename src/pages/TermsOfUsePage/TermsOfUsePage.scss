@@ -1,0 +1,38 @@
+li {
+  list-style-type: none;
+  text-align: justify;
+}
+
+ol {
+  counter-reset: list1;
+}
+
+ol li:before {
+  counter-increment: list1;
+  content: counter(list1) ". ";
+}
+
+ol ol {
+  counter-reset: list2;
+}
+
+ol ol li:before {
+  counter-increment: list2;
+  content: counter(list1) "." counter(list2) ". ";
+}
+
+ol ol ol{
+  counter-reset: list3;
+}
+
+ol ol ol li:before {
+  counter-increment: list3;
+  content: counter(list1) "." counter(list2) "." counter(list3) ". ";
+}
+
+p > strong {
+  text-decoration: underline;
+}
+ol strong {
+  text-decoration: underline;
+}

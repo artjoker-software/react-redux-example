@@ -1,0 +1,39 @@
+.inputField {
+  direction: ltr;
+  text-align: right;
+}
+.mobileInput {
+  position: relative;
+  & > img {
+    outline: none;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+  }
+}
+
+.wrapper {
+  position: relative;
+  .iconWrapper {
+    position: absolute;
+    width: 18px;
+    height: 45px;
+    left: 10px;
+    top: 0;
+    line-height: 40px;
+    img {
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .iconWrapper {
+    position: absolute;
+    width: 18px;
+    height: 40px;
+    left: 10px;
+    top: 0;
+    line-height: 35px;
+  }
+}
