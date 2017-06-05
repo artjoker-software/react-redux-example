@@ -44,20 +44,10 @@ app.use('/api', (req, res) => proxy(req.url, req, res));
 
 // SSR
 app.use((req, res) => {
-  const localhost = (req.headers.host.indexOf('localhost') === 0);
-  const isHttp = (req.headers['x-forwarded-proto'] === 'http');
-
   if (__DEVELOPMENT__) {
     // Do not cache webpack stats: the script file would change since
     // hot module replacement is enabled in the development env
     webpackIsomorphicTools.refresh();
-  } else if (isHttp && !localhost) {
-    res.redirect(301, `https://${req.headers.host}${req.url}`);
-    return;
-  } else if (__PRODUCTION__ && !req.headers.host.match(/^www\..*/i) && !localhost) {
-    // Allow localhost for testing
-    res.redirect(301, `https://www.${req.headers.host}${req.url}`);
-    return;
   }
 
   const client = new ApiClient(req);
